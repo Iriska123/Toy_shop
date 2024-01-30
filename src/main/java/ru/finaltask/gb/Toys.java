@@ -3,9 +3,9 @@ package ru.finaltask.gb;
 public class Toys {
     private int id;
     private String name;
-    private int weight;
+    private double weight;
 
-    public Toys(int id, String name, int weight) {
+    public Toys(int id, String name, double weight) {
         this.id = id;
         this.name = name;
         this.weight = weight;
@@ -27,11 +27,16 @@ public class Toys {
         this.name = name;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("id = %d, name = %s, weight = %f", getId(), getName(), getWeight());
     }
 }
